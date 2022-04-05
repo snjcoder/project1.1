@@ -1,0 +1,27 @@
+{
+  "name": "hangman-game",
+  "version": "1.0.0",
+  "description": "game of hangman",
+  "main": "project1.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Neetha",
+  "license": "ISC",
+  "dependencies": {
+    "document": "^0.4.7",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "readline-sync": "^1.4.10",
+    "underscore": "^1.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snjcoder/Hangman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snjcoder/Hangman/issues"
+  },
+  "homepage": "https://github.com/snjcoder/Hangman#readme"
+}
