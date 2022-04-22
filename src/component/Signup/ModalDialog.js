@@ -1,8 +1,8 @@
-import React from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import Form from './Form';
+import React from "react";
+import Dialog from "@material-ui/core/Dialog";
+import Form from "./component/Signup/Form";
 
-const ModalDialog = ({ open, handleClose }) => {
+function ModalDialog({ open, handleClose }) {
   return (
     // props received from App.js
     <Dialog open={open} onClose={handleClose}>
@@ -10,6 +10,6 @@ const ModalDialog = ({ open, handleClose }) => {
       <Form handleClose={handleClose} />
     </Dialog>
   );
-};
+}
 
 export default ModalDialog;
