@@ -39,3 +39,15 @@
     transform: rotate(360deg);
   }
 }
+
+.Home{
+  justify-content:center;
+  background-image:url(./);
+  height: 100vh;
+  background-repeat:no-repeat;
+
+}
+label{
+  display: block;
+  font-weight:bold;
+}
