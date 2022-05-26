@@ -5,7 +5,7 @@ import Home from "./pages/home";
 import Login from "./pages/Login";
 import AboutUs from "./component/Aboutus/AboutUs";
 import Navigation from "./component/Navigation";
-import SignUpForm from "./component/SignUp";
+import SignUp from "./component/SignUp";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
