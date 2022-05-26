@@ -93,10 +93,17 @@ const LoginForm = ({ handleClose }) => {
       </form>
       <p />
       <h4>New to NenesPay?</h4>
-
-      <a href="#" onClick={() => <SignUp />}>
-        SIGN UP
-      </a>
+      <button>
+        <a href="http://localhost:3000/signup">Create your Nenes Pay Account</a>
+      </button>
+      <div>
+        <br />
+        <br />
+        <br />
+        <span class="a-size-mini a-color-secondary">
+          © 2022, NenesPay.com, Inc. or its affiliates
+        </span>
+      </div>
     </div>
   );
 };

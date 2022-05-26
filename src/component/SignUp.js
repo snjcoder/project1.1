@@ -25,19 +25,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignUpForm = ({ handleClose }) => {
+const SignUp = ({ handleClose }) => {
   const classes = useStyles();
   // create state variables for each input
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [gender, setGender] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const avatarStyle = { backgroundColor: "#E74C3C" };
-  const GenderStyle = {
-    width: "100%",
-    margin: "5px 0 0 18px",
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,7 +42,7 @@ const SignUpForm = ({ handleClose }) => {
       lastName,
       email,
       password,
-      gender,
+      confirmPassword,
     };
     console.log("newUser", newUser);
     const data = JSON.stringify(newUser);
@@ -63,12 +59,12 @@ const SignUpForm = ({ handleClose }) => {
     setLastName("");
     setEmail("");
     setPassword("");
-    setGender("");
+    setConfirmPassword("");
 
-    console.log(firstName, lastName, email, password, gender);
+    console.log(firstName, lastName, email, password, confirmPassword);
     handleClose();
   };
-  console.log(gender);
+
   return (
     <form className={classes.root} onSubmit={handleSubmit}>
       <h1>
@@ -107,22 +103,14 @@ const SignUpForm = ({ handleClose }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <FormControl
-        className={classes.root}
-        style={GenderStyle}
-        onChange={(e) => setGender(e.target.value)}
-        right="50px"
-      >
-        <FormLabel component="legend">Gender</FormLabel>
-        <RadioGroup
-          aria-label="gender"
-          name="gender"
-          style={{ display: "initial" }}
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-        </RadioGroup>
-      </FormControl>
+      <TextField
+        label="Confirm Password"
+        variant="filled"
+        type="confirmPassword"
+        required
+        value={password}
+        onChange={(e) => setConfirmPassword(e.target.value)}
+      />
 
       <Box>
         <Button variant="contained" onClick={handleClose}>
@@ -132,8 +120,28 @@ const SignUpForm = ({ handleClose }) => {
           Sign Up
         </Button>
       </Box>
+      <div>
+        <div />
+        <br />
+        <input type="checkbox" id="regulation" className="regulation"></input>
+        By creating an account, you agree to NenesPay Conditions of Use. <br />
+        <br></br>
+      </div>
+      <p />
+      <h4>
+        Already have an account? <a href="http://localhost:3000/login">Login</a>
+      </h4>
+
+      <div>
+        <br />
+        <br />
+        <br />
+        <span class="a-size-mini a-color-secondary">
+          © 2022, NenesPay.com, Inc. or its affiliates
+        </span>
+      </div>
     </form>
   );
 };
 
-export default SignUpForm;
+export default SignUp;
